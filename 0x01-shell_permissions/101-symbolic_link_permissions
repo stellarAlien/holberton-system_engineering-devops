@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod vincent _hello chgrp staff _hello
+chmod -h vincent:staff _hello
