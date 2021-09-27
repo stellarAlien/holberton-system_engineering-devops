@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ra > touch ls-cwd_state
+ls -la > 'ls-cwd_state'
