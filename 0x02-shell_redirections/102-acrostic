@@ -1,2 +1,2 @@
 #!/bin/bash
-grep 
+cut -c1 | tr -d "/n" | paste -s -d ''
