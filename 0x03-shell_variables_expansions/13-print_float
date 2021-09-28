@@ -1,0 +1,2 @@
+#!/bin/bash
+printf("%lf\n",$NUMBER)
