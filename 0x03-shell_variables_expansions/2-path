@@ -1,2 +1,2 @@
 #!/bin/bash
-find -name=$PATH type -f  | echo("/action")
+PATH=$PATH:/action
