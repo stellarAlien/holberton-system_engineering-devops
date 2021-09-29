@@ -1,2 +1,2 @@
 #!/bin/bash
-paste -sd "\t\n"
+paste - -  | cut -f 1 
