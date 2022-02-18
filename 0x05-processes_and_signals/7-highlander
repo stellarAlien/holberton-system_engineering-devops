@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#to infinity and beyond then a message on SIGTERM
+# shellcheck disable=SC2009
+trap \
+"{ echo I am invincible!!!; }" \
+SIGTERM
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
