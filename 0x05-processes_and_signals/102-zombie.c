@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include<stdio.h>
-
+#include<stddef.h>
+#include<unistd.h>
 /**
  *infinite_while - infinite
  *Return: always 0
@@ -25,8 +26,8 @@ int main(void)
 	{
 		p = fork();
 		printf("Zombie process created, PID: %u\n", p);
-		infinite_while();
 	}
+	infinite_while();
 	return (0);
 }
 
