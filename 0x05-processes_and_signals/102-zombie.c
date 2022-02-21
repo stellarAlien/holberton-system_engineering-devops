@@ -1,10 +1,10 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<stddef.h>
-#include<unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
 /**
- *infinite_while - infinite
- *Return: always 0
+ * infinite_while - infinite
+ * Return: int
  */
 int infinite_while(void)
 {
@@ -14,18 +14,22 @@ int infinite_while(void)
 	}
 	return (0);
 }
+
 /**
- * main - forks 5 times
- * Return: Always 0
+ * main - fork 5 times
+ * Return: always 0
  */
 int main(void)
 {
-	unsigned int i, p;
+	pid_t zombie;
+	int i = 0;
 
-	for (i = 0; i < 5; i++)
+	for (; i < 5; i++)
 	{
-		p = fork();
-		printf("Zombie process created, PID: %u\n", p);
+		zombie = fork();
+		if (!zombie)
+			return (0);
+		printf("Zombie process created, PID:%d\n", zombie);
 	}
 	infinite_while();
 	return (0);
