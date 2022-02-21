@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#create a pid file then delete when SIGTERM is recieved
+trap echo"To infinity and beyond" SIGTERM
+trap echo "Y U no love me?!" SIGINT
+trap "rm -rf /var/run/myscript.pid" SIGQUIT SIGTERM
+echo $$ > /var/run/myscript.pid
+while true
+do
+echo "To infinity and beyond";
+done 
