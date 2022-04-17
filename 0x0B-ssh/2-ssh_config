@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#configure ssh to refuse connecting with a password
+ssh -i ~/.ssh/school ubuntu@34.139.82.144
+ssh  ubuntu@34.139.82.144  cat  /etc/ssh/sshd_config  >> PasswordAuthentication no
