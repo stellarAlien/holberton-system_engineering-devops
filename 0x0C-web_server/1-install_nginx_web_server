@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#install Nginx
+sudo apt-get -y update
+sudo apt-get -y install  nginx
+sudo systemctl disable nginx
+sudo "server {listen localhost:80;}" >> ~/etc/nginx/nginx.conf
+sudo echo "Hello World" > /var/www/html/index.nginx-debian.html
