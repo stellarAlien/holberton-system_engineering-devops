@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# remove default host dipatch
+#other solution might be ln -s /etc/nginx/sites-availabe/mysite.com /etc/nginx/sites-enabled/mysite.com
+#for reference https://stackoverflow.com/questions/14460935/nginx-only-shows-welcome-page
+cat /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default
+sudo service nginx restart
