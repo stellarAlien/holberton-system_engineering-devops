@@ -8,7 +8,7 @@ echo "
 frontend myapi
     bind *:80
     mode http
-    default_backend app
+    default_backend mayapi
 backend myapi
     balance roundrobin
     server 3708-web-01 34.139.82.144:80 check
