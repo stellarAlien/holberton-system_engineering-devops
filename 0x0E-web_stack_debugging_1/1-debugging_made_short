@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #delete  runtime file
-cat /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
 rm /run/nginx.pid
