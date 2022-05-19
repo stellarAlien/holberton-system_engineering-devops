@@ -2,7 +2,7 @@
 """_summary_
     return each employee's todo list
     Returns:
-        employee progress    
+        employee progress
 """
 import requests
 import sys
