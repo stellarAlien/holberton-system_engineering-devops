@@ -12,4 +12,4 @@ def number_of_subscribers(subreddit):
     r = requests.get('reddit.com/r/' + subreddit)
     if ((r.status_code % 100) == 3 or r.status_code == 404):
         return 0
-    return s.get_subreddit(subreddit).subscribers
+    return s.get_subreddit(subreddit).subscribers                             
