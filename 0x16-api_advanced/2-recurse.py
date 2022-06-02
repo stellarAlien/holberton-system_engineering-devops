@@ -2,10 +2,11 @@
 """
 Query Reddit API recursively for all hot articles of a given subreddit
 """
+
 import requests
 
 
-def recurse(subreddit, hot_list=[], after="tmp"):
+def recurse(subreddit, hot_list=[], after=""):
     """
        read api responses recursively
     """
