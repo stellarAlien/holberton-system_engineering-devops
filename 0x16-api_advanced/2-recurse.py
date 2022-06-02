@@ -12,7 +12,7 @@ def hot_recursion_api(subreddit, hot_list=[], after="tmp"):
     headers = requests.utils.default_headers()
     headers.update({'User-Agent': 'Mozilla/5.0'})
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    if after is not None:
+    if after != "tmp":
         url = url + "?after={}".format(after)
     r = requests.get(url, headers=headers, allow_redirects=False)
     results = r.json().get('data', {}).get('children', [])
